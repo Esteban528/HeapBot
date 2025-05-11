@@ -3,10 +3,34 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
+/**
+ * @interface EventHandler
+ * Defines the structure for an event handler module.
+ * Each event handler file should export a default object conforming to this interface.
+ */
 export interface EventHandler<K extends keyof ClientEvents = keyof ClientEvents> {
-	name: K;
-	once?: boolean;
-	execute: (...args: ClientEvents[K]) => void | Promise<void>;
+    /**
+     * The Discord.js client event to listen for.
+     * @example Events.MessageCreate
+     * @type {ClientsEvents}
+     */
+    name: K;
+    /**
+     * Optional. If true, the event handler will be registered using `client.once`
+     * and will only be executed a single time for the event.
+     * If false or undefined, it will be registered using `client.on`.
+     * @type {boolean}
+     * @defaultvalue false
+     */
+    once?: boolean;
+    /**
+     * The function to execute when the specified event is emitted.
+     * It receives the arguments specific to that Discord.js event.
+     *
+     * @param {...ClientEvents[K]} args - The arguments emitted by the Discord.js event.
+     * @returns {void | Promise<void>} Can be synchronous or asynchronous.
+     */
+    execute: (...args: ClientEvents[K]) => void | Promise<void>;
 }
 
 export async function eventLoader(client: Client) {

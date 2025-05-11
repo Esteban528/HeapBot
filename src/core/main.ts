@@ -1,11 +1,14 @@
-// Importa clases necesarias de Discord.js
-import { Client, Collection, Events, GatewayIntentBits, MessageFlags, REST, Routes } from 'discord.js';
+import { Client, Events, GatewayIntentBits, MessageFlags, REST, Routes } from 'discord.js';
 import commandHandler from './commandHandler';
 import { eventLoader } from './eventHandler';
 
+/** 
+ * @file Main entry point for the Discord bot.
+ * This script initializes the Discord.js client, sets up basic event listeners,
+ * logs the bot into Discord, and loads command and event handlers.
+ */
+
 const token = process.env.DISCORD_TOKEN;
-const clientId = process.env.CLIENT_ID;
-const guildId = process.env.GUILD_ID;
 
 const client = new Client({ intents: [
   GatewayIntentBits.Guilds,

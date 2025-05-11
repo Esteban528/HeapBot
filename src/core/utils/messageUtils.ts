@@ -1,5 +1,12 @@
 import { type Message } from "discord.js";
 
+/**
+ * Replies to a Discord message with the given content.
+ * If the content is too long, it splits the message into multiple replies
+ * using the `sanitizer` function to preserve code blocks.
+ * @param content - The string content to reply with.
+ * @param message - The Discord.js Message object to reply to.
+ */
 export function replyMessage(content: string, message: Message) {
 	if (content.length >= 1990) {
 		sanitizer(content).forEach(m => message.reply(m));
