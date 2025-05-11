@@ -1,15 +1,18 @@
-# heapbot
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 
-To install dependencies:
+# HeapBot
+Bot de discord de propósito general con un conjunto de características y herramientas.
+ 
+# Para empezar
 
+Instalar dependencias
 ```bash
 bun install
 ```
 
-To run:
-
+Para ejecutar
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.2.8. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
