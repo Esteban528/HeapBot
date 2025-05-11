@@ -38,17 +38,17 @@ Todas las contribuciones deben realizarse mediante un *fork* del repositorio y u
    git checkout -b feature/nombre-de-la-funcionalidad
    ```
 2. El código introducido debe ser estrictamente en inglés igual que su documentación, haga uso de buenas prácticas y principios de modularidad y optimización.
+3. El mensaje de cada commit debe ser estrictamente en inglés y con el estándar [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0)
+4. Implementar los cambios de manera aislada. Se debe procurar modificar únicamente los archivos relacionados con la nueva funcionalidad. Los cambios que afecten otras partes del proyecto podrían ser rechazados.
 
-3. Implementar los cambios de manera aislada. Se debe procurar modificar únicamente los archivos relacionados con la nueva funcionalidad. Los cambios que afecten otras partes del proyecto podrían ser rechazados.
+5. La documentación debe ser incluida cuando sea necesaria; puede omitirse si no aporta valor o no es requerida.
 
-4. La documentación debe ser incluida cuando sea necesaria; puede omitirse si no aporta valor o no es requerida.
-
-5. Se recomienda evitar:
+6. Se recomienda evitar:
 
    * Commits innecesarios o con mensajes poco descriptivos.
    * Commits generales que agrupen múltiples cambios sin relación clara.
 
-6. Antes de enviar una *pull request*, se debe comprobar que la funcionalidad añadida funciona correctamente y no introduce errores.
+7. Antes de enviar una *pull request*, se debe comprobar que la funcionalidad añadida funciona correctamente y no introduce errores.
 
 ---
 
