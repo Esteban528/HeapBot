@@ -4,8 +4,8 @@
 
 # HeapBot
 Bot de discord de propósito general con un conjunto de características y herramientas.
- 
-# Para empezar
+
+- [Contribuir](./CONTRIBUTING.md)
 
 Instalar dependencias
 ```bash
